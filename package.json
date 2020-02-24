@@ -1,0 +1,32 @@
+{
+  "name": "india-pincode-regex",
+  "version": "1.0.0",
+  "description": "A simple regex based validator for PIN codes in India",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/captn3m0/india-pincode-regex.git"
+  },
+  "keywords": [
+    "india",
+    "pincode",
+    "regex",
+    "validator",
+    "PIN"
+  ],
+  "author": "Nemo <npm@captnemo.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/captn3m0/india-pincode-regex/issues"
+  },
+  "homepage": "https://github.com/captn3m0/india-pincode-regex#readme",
+  "devDependencies": {
+    "regexgen": "^1.3.0"
+  }
+}

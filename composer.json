@@ -1,0 +1,21 @@
+{
+    "name": "captn3m0/india-pincode-regex",
+    "description": "A simple regex based validator for PIN codes in India",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nemo",
+            "email": "composer@captnemo.in"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PIN\\": "src/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    }
+}

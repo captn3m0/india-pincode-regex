@@ -21,6 +21,11 @@ use PIN\Validator as P;
 P::validate('110011'); // returns true;
 ```
 
+## Contributing
+
+- See [`HACKING.md`](HACKING.md) for some development details.
+- Pull requests are welcome for adding libraries in other languages (in the same repo).
+
 ## License
 
 Licensed under the [MIT License](https://nemo.mit-license.org/). See LICENSE file for details.

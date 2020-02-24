@@ -1,5 +1,5 @@
 {
-    "name": "captn3m0/india-pincode-regex",
+    "name": "captn3m0/pincode",
     "description": "A simple regex based validator for PIN codes in India",
     "type": "library",
     "license": "MIT",

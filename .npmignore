@@ -1,0 +1,9 @@
+composer.*
+vendor/
+tests/
+phpunit.xml
+node_modules/
+src/*.php
+.travis.yml
+src/generate.js
+HACKING.md

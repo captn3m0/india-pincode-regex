@@ -1,14 +1,19 @@
-matrix:
+jobs:
   include:
     - language: php
-      php:
-      - '7.2'
-      - '7.3'
-      - '7.4'
+      php: '7.2'
+      install: composer install
+    - language: php
+      php: '7.3'
+      install: composer install
+    - language: php
+      php: '7.4'
       install: composer install
     - language: node_js
-      node_js:
-      - '10' 
-      - '12' 
-      - '13' 
-      - '14'
+      node_js: '10'
+    - language: node_js
+      node_js: '12'
+    - language: node_js
+      node_js: '13'
+    - language: node_js
+      node_js: '14'

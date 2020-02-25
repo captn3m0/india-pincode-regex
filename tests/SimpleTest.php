@@ -4,9 +4,9 @@ use PIN\Validator as P;
 use PHPUnit\Framework\TestCase;
 
 class SimpleTest extends TestCase {
-	const PINS = ['244713', '560029', '560030'];
+	const PINS = ['244713', '560029', '560030', '110011'];
 
-	const INVALID_PINS = ['999999'];
+	const INVALID_PINS = ['999999', '99999', '9999', '999', '99', '9'];
 
 	public function testSamplePins() {
 		foreach(self::PINS as $pin) {

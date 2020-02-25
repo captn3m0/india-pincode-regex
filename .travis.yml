@@ -1,6 +1,14 @@
-language: php
-php:
-  - '7.2'
-  - '7.3'
-  - '7.4'
-install: composer install
+matrix:
+  include:
+    - language: php
+      php:
+      - '7.2'
+      - '7.3'
+      - '7.4'
+      install: composer install
+    - language: node_js
+      node_js:
+      - '10' 
+      - '12' 
+      - '13' 
+      - '14'

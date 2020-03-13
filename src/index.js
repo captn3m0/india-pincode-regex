@@ -1,9 +1,12 @@
 const readline = require("readline");
 const fs = require("fs");
 
-const regexes = fs.readFileSync(__dirname + '/../regex.txt', 'utf8').split("\n")
-  // We drop the opening / and ending /u
-  .map(function(r) {return new RegExp(r.slice(1, -2));})
+const regexes = fs.readFileSync(__dirname + '/../regex.txt', 'utf8')
+  .split("\n")
+  // Remove empty lines
+  .filter(function(r) {return r.length > 1})
+  // Remove the opening and closing slashes
+  .map(function(r) {return new RegExp(r.slice(1,-1));})
 
 module.exports = {
   validate: function(pin) {

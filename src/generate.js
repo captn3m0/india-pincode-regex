@@ -12,20 +12,23 @@ const readInterface = readline.createInterface({
   console: false
 });
 
-let t1 = new Trie(),
-  t2 = new Trie();
+regexes = [];
+
+for (var i = 0; i < 8; i++) {
+  regexes.push(new Trie());
+}
 
 readInterface.on("line", function(line) {
   if (line.length === 6) {
-    if (['1', '2', '3', '4'].includes(line.charAt(0))) {
-      t1.add(line);
-    } else {
-      t2.add(line)
-    }
+    // First character of the PIN
+    let areaCode = parseInt(line.charAt(0), 10);
+    let areaCodeIndex = areaCode - 1;
+    regexes[areaCodeIndex].add(line);
   }
 });
 
 readInterface.on("close", function() {
-  console.log(t1.toRegExp("u"));
-  console.log(t2.toRegExp("u"));
+  for(i in regexes) {
+    console.log(regexes[i].toRegExp());
+  }
 });

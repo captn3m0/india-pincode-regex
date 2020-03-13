@@ -1,6 +1,6 @@
 # india-pincode-regex ![Packagist Version](https://img.shields.io/packagist/v/captn3m0/pincode?style=plastic) [![Build Status](https://travis-ci.org/captn3m0/india-pincode-regex.svg?branch=master)](https://travis-ci.org/captn3m0/india-pincode-regex) ![npm](https://img.shields.io/npm/v/pincode-validator?style=plastic) ![GitHub package.json version](https://img.shields.io/github/package-json/v/captn3m0/india-pincode-regex?style=plastic) ![GitHub](https://img.shields.io/github/license/captn3m0/india-pincode-regex?style=plastic)
 
-Validate a [Postal Index Number][wiki] for India with a regex. The regexes are available in `regex.txt`. There are 2 regexes. The first validates PINs starting from 1-4, and the second validates the ones starting from 5-8. The reason for the split is to keep the regex size small. Currently they are both at 16K each.
+Validate a [Postal Index Number][wiki] for India with a few regexes. The regexes are available in `regex.txt`. There is one regex per area code (the first digit of the PIN, which goes from 1-8).
 
 ## Source
 

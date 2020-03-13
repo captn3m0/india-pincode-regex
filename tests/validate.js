@@ -9,6 +9,7 @@ assert.strictEqual(pincode.validate('560029'), true, '560029');
 assert.strictEqual(pincode.validate('560030'), true, '560030');
 
 // Incorrect
+assert.strictEqual(pincode.validate('1100111'), false, '1100111');
 assert.strictEqual(pincode.validate('111111'), false, '111111');
 assert.strictEqual(pincode.validate('999999'), false, '999999');
 assert.strictEqual(pincode.validate('99999'), false, '99999');

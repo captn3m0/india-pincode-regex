@@ -1,9 +1,38 @@
 [tool.poetry]
 name = "pincode"
-version = "0.1.0"
+version = "1.0.3"
 description = "A simple offline pincode validator for India"
 authors = ["Nemo <python@captnemo.in>"]
 license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/captn3m0/india-pincode-regex"
+repository = "https://github.com/captn3m0/india-pincode-regex"
+documentation = "https://github.com/captn3m0/india-pincode-regex/wiki"
+keywords = ["pincode", "regex", "offline", "pin", "validator"]
+
+packages = [
+    { include = "pincode", from = "src" },
+]
+
+include = ["CHANGELOG.md", "README.md", "regex.txt"]
+
+exclude = [
+    "src/*.js",
+    "src/*.php",
+    "tests/*.php",
+    "tests/*.js",
+    "vendor/",
+    "composer.",
+    "package.json",
+    "package-lock.json",
+    "node_modules/"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries"
+]
 
 [tool.poetry.dependencies]
 python = "^3.5"

@@ -7,3 +7,4 @@ src/*.php
 .travis.yml
 src/generate.js
 HACKING.md
+dist/

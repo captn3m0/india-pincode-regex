@@ -3,3 +3,4 @@
 composer.lock
 __pycache__/
 /dist/
+package-lock.json

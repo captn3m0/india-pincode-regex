@@ -8,3 +8,8 @@ src/*.php
 src/generate.js
 HACKING.md
 dist/
+# This holds the python source
+src/pincode
+*.toml
+Pipfile
+.editorconfig

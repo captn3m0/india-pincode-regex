@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pincode"
-version = "1.0.3"
+version = "1.0.4"
 description = "A simple offline pincode validator for India"
 authors = ["Nemo <python@captnemo.in>"]
 license = "MIT"

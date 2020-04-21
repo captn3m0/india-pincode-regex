@@ -6,6 +6,12 @@
 4. `npm install`
 5. `node src/generate.js /tmp/pin.txt > regex.txt`
 
+# Generating the browser-version
+
+1. Make sure development dependencies are installed.
+2. `npm run browserify`.
+3. Test it by opening `tests/index.html` in your browser.
+
 # PHP Release
 
 1. `git tag 1.2.3`

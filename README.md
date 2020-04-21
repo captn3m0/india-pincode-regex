@@ -32,6 +32,17 @@ const P = require('pincode-validator');
 P.validate('110011'); // returns true
 ````
 
+### Browser
+
+To use it in the browser, download the `pincode-regex.js` file and include it in your browser. `Pincode` is available as a Global variable.
+
+```html
+<script src="../pincode-regex.js"></script>
+<script>
+Pincode.validate("560029"); // returns true
+</script>
+```
+
 ## Contributing
 
 - See [`HACKING.md`](HACKING.md) for some development details.

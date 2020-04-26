@@ -1,14 +1,18 @@
 # india-pincode-regex ![Packagist Version](https://img.shields.io/packagist/v/captn3m0/pincode?style=plastic) [![Build Status](https://travis-ci.org/captn3m0/india-pincode-regex.svg?branch=master)](https://travis-ci.org/captn3m0/india-pincode-regex) ![npm](https://img.shields.io/npm/v/pincode-validator?style=plastic) ![GitHub package.json version](https://img.shields.io/github/package-json/v/captn3m0/india-pincode-regex?style=plastic) ![GitHub](https://img.shields.io/github/license/captn3m0/india-pincode-regex?style=plastic)
 
-Validate a [Postal Index Number][wiki] for India with a few regexes. The regexes are available in `regex.txt`. There is one regex per area code (the first digit of the PIN, which goes from 1-8).
+Validate a [Postal Index Number][wiki] for India with a few regexes and zero false-positives. The regexes are available in `regex.txt`. There is one regex per area code (the first digit of the PIN, which goes from 1-8).
+
+## Why?
+
+A simple `\d{6}` approach marks a lot of invalid pincodes as valid. Out of the 900000 possible combinations, only approximately `155600` are valid pincodes in India. A simple example is `111111` which is an invalid pincode, but any simple 6 digit-check will pass it as a valid one.
 
 ## Source
 
-The source for the data is the ["All India Pincode Directory"](https://data.gov.in/resources/all-india-pincode-directory) dataset on data.gov.in.
+The source for the data is the ["All India Pincode Directory"](https://data.gov.in/resources/all-india-pincode-directory) dataset on data.gov.in. The last updated date for the dataset is currently 30th May 2019.
 
 ## Usage
 
-The `regex.txt` file is 32KB in size, so you can easily use it wherever you want, including browsers.
+The `regex.txt` file is 32KB in size, so you can easily use it wherever you want, including browsers. If you are using any of the packages below, this is already delivered compressed.
 
 ### PHP
 

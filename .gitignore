@@ -16,3 +16,4 @@ __pycache__/
 # https://bundler.io/man/bundle-install.1.html#THE-GEMFILE-LOCK
 # but we have zero deps, so it doesn't make sense
 Gemfile.lock
+*.gem

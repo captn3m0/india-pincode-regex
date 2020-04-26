@@ -27,3 +27,9 @@ jobs:
     - language: python
       python: '3.8'
       script: nosetests tests/test.py
+    - language: ruby
+      ruby: '2.5'
+    - language: ruby
+      ruby: '2.6'
+    - language: ruby
+      ruby: '2.7'

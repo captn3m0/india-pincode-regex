@@ -6,4 +6,10 @@ describe PincodeValidator do
         expect(described_class::valid? pin).to eq(true)
     end
   end
+
+  it 'should validate incorrect pincodes' do
+    ['999999', '99999', '9999', '999', '99', '9', '111111', '2447131'].each do |pin|
+        expect(described_class::valid? pin).to eq(false), "#{pin} should be invalid"
+    end
+  end
 end

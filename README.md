@@ -32,6 +32,22 @@ const P = require('pincode-validator');
 P.validate('110011'); // returns true
 ````
 
+## Ruby
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'pincode_validator'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install pincode_validator
+
 ### Browser
 
 To use it in the browser, download the `pincode-regex.js` file and include it in your browser. `Pincode` is available as a Global variable.
@@ -43,10 +59,22 @@ Pincode.validate("560029"); // returns true
 </script>
 ```
 
+Since there is no hotline/CDN for this yet, please watch to repo to get notified of new releases.
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/captn3m0/outliner.
+
+## Code of Conduct
+
+Everyone interacting in the this project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/captn3m0/outliner/blob/master/CODE_OF_CONDUCT.md).
+
+
 ## Contributing
 
 - See [`HACKING.md`](HACKING.md) for some development details.
 - Pull requests are welcome for adding libraries in other languages (in the same repo).
+- This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

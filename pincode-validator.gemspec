@@ -1,4 +1,4 @@
-require_relative 'src/pincode_validator/version'
+require_relative 'src/pincode_validator'
 
 Gem::Specification.new do |spec|
   spec.name          = "pincode_validator"
@@ -15,13 +15,16 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
-    `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  end
+  spec.files         = [
+    'Gemfile',
+    'LICENSE',
+    'pincode-validator.gemspec',
+    'README.md',
+    'regex.txt',
+    'src/pincode_validator.rb',
+  ]
 
   spec.license = 'MIT'
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["src"]
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.8'

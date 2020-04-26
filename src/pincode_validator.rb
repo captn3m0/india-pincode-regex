@@ -1,5 +1,3 @@
-require "pincode_validator/version"
-
 module PincodeValidator
   VERSION = "1.0.3"
   FILENAME='regex.txt'

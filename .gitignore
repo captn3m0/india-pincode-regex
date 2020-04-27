@@ -17,3 +17,4 @@ __pycache__/
 # but we have zero deps, so it doesn't make sense
 Gemfile.lock
 *.gem
+*.csv

@@ -1,4 +1,4 @@
-from pincode import *
+from pincode import Pincode
 from nose.tools import assert_equals
 
 def test_valid_pincodes():

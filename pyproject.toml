@@ -1,44 +1,43 @@
-[tool.poetry]
+[project]
 name = "pincode"
 version = "1.0.4"
 description = "A simple offline pincode validator for India"
-authors = ["Nemo <python@captnemo.in>"]
-license = "MIT"
+authors = [
+    {name = "Nemo", email = "python@captnemo.in"},
+]
+dependencies = ["requests"]
 readme = "README.md"
-homepage = "https://github.com/captn3m0/india-pincode-regex"
-repository = "https://github.com/captn3m0/india-pincode-regex"
-documentation = "https://github.com/captn3m0/india-pincode-regex/wiki"
+requires-python = ">=3.7"
+license = {text = "MIT"}
 keywords = ["pincode", "regex", "offline", "pin", "validator"]
-
-packages = [
-    { include = "pincode", from = "src" },
-]
-
-include = ["CHANGELOG.md", "README.md", "regex.txt"]
-
-exclude = [
-    "src/*.js",
-    "src/*.php",
-    "tests/*.php",
-    "tests/*.js",
-    "vendor/",
-    "composer.",
-    "package.json",
-    "package-lock.json",
-    "node_modules/"
-]
-
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries"
 ]
 
-[tool.poetry.dependencies]
-python = "^3.5"
+[project.urls]
+homepage = "https://github.com/captn3m0/india-pincode-regex"
+Repository = "https://github.com/captn3m0/india-pincode-regex"
+Documentation = "https://github.com/captn3m0/india-pincode-regex/wiki"
 
-[tool.poetry.dev-dependencies]
+[tool.pdm]
+includes = ["CHANGELOG.md", "README.md", "regex.txt", "src/pincode"]
+excludes = [
+    "src/*.js",
+    "src/*.php",
+    "tests/*.php",
+    "tests/*.js",
+    "tests/*.rb",
+    "tests/*.html",
+    "tests/jasmine*",
+    "vendor/",
+    "composer.",
+    "package.json",
+    "package-lock.json",
+    "node_modules/"
+    ]
 
 [build-system]
-requires = ["poetry>=0.12"]
-build-backend = "poetry.masonry.api"
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"

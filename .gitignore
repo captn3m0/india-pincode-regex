@@ -18,3 +18,6 @@ __pycache__/
 Gemfile.lock
 *.gem
 *.csv
+.pdm.toml
+__pypackages__/
+src/pincode.egg-info/

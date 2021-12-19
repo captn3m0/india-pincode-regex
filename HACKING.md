@@ -1,6 +1,6 @@
 # Generating the regex
 
-1. Download the latest CSV file from <https://data.gov.in/node/85839/download> or <https://data.gov.in/resources/all-india-pincode-directory>.
+1. Download the latest CSV file from <https://data.gov.in/resources/all-india-pincode-directory-till-last-month>.
 2. Copy all the pincodes to a pincodes.txt file
 3. Generate all unique pincodes by running `sort -u pincodes.txt > /tmp/pin.txt`
 4. `npm install`

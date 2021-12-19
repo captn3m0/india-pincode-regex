@@ -9,26 +9,30 @@ if (!process.argv[2]) {
 
 const readInterface = readline.createInterface({
   input: fs.createReadStream(process.argv[2]),
-  console: false
+  console: false,
 });
 
 regexes = [];
 
+// There are 3 Pincodes that start with 9, but we
+// ignore those as test offices.
 for (var i = 0; i < 8; i++) {
   regexes.push(new Trie());
 }
 
-readInterface.on("line", function(line) {
+readInterface.on("line", function (line) {
   if (line.length === 6) {
     // First character of the PIN
     let areaCode = parseInt(line.charAt(0), 10);
-    let areaCodeIndex = areaCode - 1;
-    regexes[areaCodeIndex].add(line);
+    if (areaCode < 9 && areaCode > 0) {
+      let areaCodeIndex = areaCode - 1;
+      regexes[areaCodeIndex].add(line);
+    }
   }
 });
 
-readInterface.on("close", function() {
-  for(i in regexes) {
+readInterface.on("close", function () {
+  for (i in regexes) {
     console.log(regexes[i].toRegExp());
   }
 });

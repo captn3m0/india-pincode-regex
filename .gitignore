@@ -21,3 +21,5 @@ Gemfile.lock
 .pdm.toml
 __pypackages__/
 src/pincode.egg-info/
+.phpunit.*cache
+*.bak

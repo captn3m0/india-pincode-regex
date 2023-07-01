@@ -1,5 +1,5 @@
 module PincodeValidator
-  VERSION = "1.0.3"
+  VERSION = "1.0.4"
   FILENAME='regex.txt'
 
   class Error < StandardError; end
@@ -8,14 +8,18 @@ module PincodeValidator
     File.dirname __dir__
   end
 
-  @@regexes ||= IO.readlines(File.join root, FILENAME).map do |line|
-    Regexp.new("^#{line.strip[1...-1]}$")
-  end
+  @@regex ||=
+    Regexp.new(File.read(File.join root, FILENAME).strip)
+
+  @@exactRegex ||=
+    Regexp.new("^#{File.read(File.join root, FILENAME).strip}$")
 
   def self.valid?(pincode)
-    @@regexes.each do |r|
-      return true if r.match? pincode
-    end
+    return true if @@exactRegex.match? pincode
     false
+  end
+
+  def self.search?(address)
+    address.scan(@@regex).map(&:first).map(&:strip)
   end
 end

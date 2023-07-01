@@ -26,13 +26,11 @@ readInterface.on("line", function (line) {
     let areaCode = parseInt(line.charAt(0), 10);
     if (areaCode < 9 && areaCode > 0) {
       let areaCodeIndex = areaCode - 1;
-      regexes[areaCodeIndex].add(line);
+      regexes[areaCodeIndex].add(line.trim());
     }
   }
 });
 
 readInterface.on("close", function () {
-  for (i in regexes) {
-    console.log(regexes[i].toRegExp());
-  }
+  console.log("(" + regexes.join('|') + ")");
 });

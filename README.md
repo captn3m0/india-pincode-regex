@@ -34,6 +34,11 @@ To use the package:
 ```js
 const P = require('pincode-validator');
 P.validate('110011'); // returns true
+P.search('my pincode is 560029'); // returns ['560029']
+
+// or directly use the regex in your code
+P.exactRegex.match('560029')
+"address with pincode (560029)".matchAll(P.regex)
 ````
 
 ## Ruby
@@ -63,12 +68,11 @@ Pincode.validate("560029"); // returns true
 </script>
 ```
 
-Since there is no hotline/CDN for this yet, please watch to repo to get notified of new releases.
+You can use githack for directly using this in your code: <https://rawcdn.githack.com/captn3m0/india-pincode-regex/1.0.4/pincode-regex.js> (Make sure you use the latest version). Please watch the repo to get notified of new releases.
 
 ## Code of Conduct
 
 Everyone interacting in the this project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/captn3m0/outliner/blob/master/CODE_OF_CONDUCT.md).
-
 
 ## Contributing
 

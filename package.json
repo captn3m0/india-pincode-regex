@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "node tests/validate.js",
+    "build": "node src/generate.js <(sort -u pincodes.csv) > regex.txt",
     "browserify": "browserify --transform brfs --outfile pincode-regex.js -s Pincode src/index.js"
   },
   "repository": {
@@ -29,7 +30,7 @@
   "homepage": "https://github.com/captn3m0/india-pincode-regex#readme",
   "devDependencies": {
     "brfs": "^2.0.2",
-    "browserify": "^16.5.1",
+    "browserify": "^17.0.0",
     "regexgen": "^1.3.0"
   },
   "dependencies": {}

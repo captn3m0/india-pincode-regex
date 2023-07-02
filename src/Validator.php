@@ -3,34 +3,53 @@
 namespace PIN;
 
 class Validator {
-	static $regex;
-  static $exactRegex;
+  static $regexes;
 
-  public static function init(){
-    if(!self::$regex) {
-      self::$regex = "/" . trim(file_get_contents('regex.txt')) . "/";
-      self::$exactRegex = "/^" . trim(file_get_contents('regex.txt')) . "$/";
+  public static function init() {
+    if(!self::$regexes) {
+      self::$regexes = array_map(function($line) {
+        return '/' . trim($line) . '/';
+      }, array_filter(file('regexes.txt')));
     }
   }
 
-	public static function validate(string $pin) {
-		self::init();
-
-    fwrite(STDERR, var_dump(self::$exactRegex, TRUE));
-
-		if (strlen($pin) === 6 and preg_match(self::$exactRegex, $pin) === 1) {
-			return true;
-		}
-
-		return false;
-	}
-
-  public static function search(string $address) {
+  /**
+   * Validate a PIN code
+   * @param string $pin
+   * @return bool
+   */
+  public static function validate(string $pin) : bool{
     self::init();
-    preg_match_all(self::$regex, $address, $matches);
 
-    return array_map(function($match) {
-      return $match[0];
-    }, $matches);
+    foreach (self::$regexes as $regex) {
+      if (strlen($pin) === 6 and preg_match($regex, $pin) === 1) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Search for PIN codes in a string
+   * @param string $address
+   * @return array
+   */
+  public static function search(string $address){
+    self::init();
+    $results = [];
+
+    foreach (self::$regexes as $regex) {
+      preg_match_all($regex, $address, $matches);
+
+      $results = array_reduce($matches, function($res, $match) {
+        if ($match[0] and in_array($match[0], $res, true) === false){
+          $res[] = $match[0];
+        }
+        return $res;
+      }, $results);
+    }
+
+    return $results;
   }
 }

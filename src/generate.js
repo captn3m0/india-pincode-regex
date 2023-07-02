@@ -32,5 +32,10 @@ readInterface.on("line", function (line) {
 });
 
 readInterface.on("close", function () {
-  console.log("(" + regexes.join('|') + ")");
+  // We maintain two files, one with a single regex using (|) for each segment
+  fs.writeFileSync("regex.txt", "(" + regexes.join('|') + ")");
+  // And another with 8 regexes, one for each area code.
+  // The latter is required for some languages, which have a regex character limit
+  // (Currently PHP)
+  fs.writeFileSync("regexes.txt", regexes.join("\n"));
 });

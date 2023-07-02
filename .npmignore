@@ -13,3 +13,4 @@ src/pincode
 *.toml
 Pipfile
 .editorconfig
+regexes.txt

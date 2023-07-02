@@ -18,10 +18,10 @@ class SimpleTest extends TestCase {
 		}
 	}
 
-  // public function testSearch() {
-  //   $this->assertSame(P::search("my pincode is 560029"), ["560029"]);
-  //   $this->assertSame(P::search("560029"), ["560029"]);
-  //   $this->assertSame(P::search("560029 244713"), ["560029", "244713"]);
-  //   $this->assertSame(P::search("address 560038 bangalore"), ["560038"]);
-  // }
+  public function testSearch() {
+    $this->assertSame(P::search("560029"), ["560029"]);
+    $this->assertSame(P::search("my pincode is 560029"), ["560029"]);
+    $this->assertSame(P::search("560029 244713"), ["244713", "560029"]);
+    $this->assertSame(P::search("address 560038 bangalore"), ["560038"]);
+  }
 }

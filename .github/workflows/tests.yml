@@ -28,7 +28,7 @@ jobs:
           php-version: ${{matrix.php}}
           tools: phpunit, composer
       - run: composer install --no-interaction
-      - run: ./vendor/bin/phpunit --migrate-configuration
+      - run: ./vendor/bin/phpunit
   ruby:
     strategy:
       matrix:

@@ -43,13 +43,13 @@ class Validator {
       preg_match_all($regex, $address, $matches);
 
       $results = array_reduce($matches, function($res, $match) {
-        if ($match[0] and in_array($match[0], $res, true) === false){
+        if (isset($match[0]) and in_array($match[0], $res, true) === false){
           $res[] = $match[0];
         }
         return $res;
       }, $results);
     }
 
-    return $results;
+    return array_values($results);
   }
 }

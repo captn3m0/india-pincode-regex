@@ -31,7 +31,7 @@
 
           "/pincode-validator.gemspec",
           "/bin",
-          "/src/pincode_validator.rb",
+          "/src/pincode_validator.rb"
         ]
     },
     "require": {},

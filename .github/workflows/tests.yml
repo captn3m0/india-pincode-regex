@@ -18,7 +18,7 @@ jobs:
     strategy:
       matrix:
         # https://www.php.net/supported-versions.php
-        php: ["8.0", "8.1", "8.2"]
+        php: ["7.2", "7.3", "7.4", "8.0", "8.1", "8.2"]
     name: PHP
     runs-on: ubuntu-latest
     steps:

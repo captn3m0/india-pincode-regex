@@ -1,13 +1,13 @@
 [project]
 name = "pincode"
-version = "1.0.4"
+version = "2.0.0"
 description = "A simple offline pincode validator for India"
 authors = [
     {name = "Nemo", email = "python@captnemo.in"},
 ]
 dependencies = ["requests"]
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 license = {text = "MIT"}
 keywords = ["pincode", "regex", "offline", "pin", "validator"]
 classifiers = [
@@ -24,6 +24,7 @@ Documentation = "https://github.com/captn3m0/india-pincode-regex/wiki"
 [tool.pdm]
 includes = ["CHANGELOG.md", "README.md", "regex.txt", "src/pincode"]
 excludes = [
+    ".github/",
     "src/*.js",
     "src/*.php",
     "tests/*.php",

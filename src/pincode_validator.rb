@@ -1,5 +1,5 @@
 module PincodeValidator
-  VERSION = "1.0.4"
+  VERSION = "2.0.0"
   FILENAME='regex.txt'
 
   class Error < StandardError; end

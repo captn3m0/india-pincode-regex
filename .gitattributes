@@ -4,3 +4,4 @@ pincode-regex.js linguist-generated
 tests/jasmine-3.5.0/* linguist-vendored
 # regex.txt is generated (see src/generate.js)
 regex.txt linguist-generated
+regexes.txt linguist-generated

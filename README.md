@@ -14,6 +14,10 @@ The source for the data is the ["All India Pincode Directory"](https://data.gov.
 
 The `regex.txt` file is 32KB in size, so you can easily use it wherever you want, including browsers. If you are using any of the packages below, this is already delivered compressed. You can use the regex directly, or via a few helper methods.
 
+## Supported Language Versions
+
+This project only supports [supported versions](https://endoflife.date) of various languages.
+
 ### PHP
 
 The package is available on [`packagist`](https://packagist.org/packages/captn3m0/pincode).

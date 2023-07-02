@@ -94,8 +94,8 @@ Everyone interacting in the this project’s codebases, issue trackers, chat roo
 
 ## Contributing
 
-- See [`HACKING.md`](HACKING.md) for some development details.
-- Pull requests are welcome for adding libraries in other languages (in the same repo).
+- See [`CONTRIBUTING.md`](CONTRIBUTING.md) for some development details and contribution guidelines
+- Pull requests are welcome for adding libraries in other languages (in the same repo). Python support is WIP, and I'd love to have support for other languages as well.
 - This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License

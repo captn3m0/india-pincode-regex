@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
   spec.require_paths = ["src"]
   spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rspec', '~> 3.8'
+  spec.add_development_dependency 'rspec', '~> 3.12'
 end

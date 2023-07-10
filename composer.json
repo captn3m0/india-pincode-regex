@@ -14,8 +14,28 @@
             "PIN\\": "src/"
         }
     },
+    "archive": {
+        "exclude": [
+          "/tests",
+          "/regex.txt",
+          "/.editorconfig",
+          "/phpunit.xml",
+
+          "/.npmignore",
+          "/package.json",
+          "/pincode-regex.js",
+          "/src/generate.js",
+          "/src/index.js",
+          "/pyproject.toml",
+          "/src/pincode/__init__.py",
+
+          "/pincode-validator.gemspec",
+          "/bin",
+          "/src/pincode_validator.rb"
+        ]
+    },
     "require": {},
     "require-dev": {
-        "phpunit/phpunit": "^9.0 || ^8.0"
+        "phpunit/phpunit": "^9.0 || ^8.0 || ^10.0"
     }
 }

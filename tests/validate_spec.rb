@@ -12,4 +12,12 @@ describe PincodeValidator do
         expect(described_class::valid? pin).to eq(false), "#{pin} should be invalid"
     end
   end
+
+  it 'should search pincodes' do
+    expect(described_class::search? '560029').to eq(['560029'])
+    expect(described_class::search? '560029, 560030').to eq(['560029', '560030'])
+    expect(described_class::search? '560029, 560030, 110011').to eq(['560029', '560030', '110011'])
+    expect(described_class::search? 'bangalore 560029').to eq(['560029'])
+    expect(described_class::search? 'bangalore 1').to eq([])
+  end
 end

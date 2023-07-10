@@ -1,25 +1,22 @@
 const readline = require("readline");
 const fs = require("fs");
 
-const regexes = fs
-  .readFileSync(__dirname + "/../regex.txt", "utf8")
-  .split("\n")
-  // Remove empty lines
-  .filter(function(r) {
-    return r.length > 1;
-  })
-  // Remove the opening and closing slashes
-  .map(function(r) {
-    return new RegExp("^" + r.slice(1, -1) + "$");
-  });
+let contents = fs.readFileSync(__dirname + "/../regex.txt", "utf8").trim()
+const regex = new RegExp(contents, "gm");
+const exactRegex = new RegExp("^" + contents + "$");
 
 module.exports = {
+  // Validates an exact 6 digit string as a valid pincode
   validate: function(pin) {
-    for (let i in regexes) {
-      if (regexes[i].test(pin)) {
-        return true;
-      }
+    if (exactRegex.test(pin)) {
+      return true;
     }
     return false;
-  }
+  },
+  // Returns all valid PIN codes for a given address
+  search: function(address) {
+    return Array.from(address.matchAll(regex), (x) => x[0])
+  },
+  regex: regex,
+  exactRegex: exactRegex
 };

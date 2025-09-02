@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A simple regex based offline validator for PIN codes in India}
   spec.homepage      = "https://github.com/captn3m0/india-pincode-regex"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.5.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 3.2")
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/captn3m0/india-pincode-regex"
@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
   spec.require_paths = ["src"]
   spec.add_development_dependency 'rake', '~> 13.0'
-  spec.add_development_dependency 'rspec', '~> 3.12'
+  spec.add_development_dependency 'rspec', '~> 3.13'
 end

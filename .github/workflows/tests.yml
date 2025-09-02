@@ -4,7 +4,8 @@ jobs:
   node:
     strategy:
       matrix:
-        node: ["12", "14", "16", "18", "20"]
+        # https://endoflife.date/nodejs
+        node: ["20", "22", "24"]
     name: Node.js
     runs-on: ubuntu-latest
     steps:
@@ -17,12 +18,12 @@ jobs:
   php:
     strategy:
       matrix:
-        # https://www.php.net/supported-versions.php
-        php: ["7.2", "7.3", "7.4", "8.0", "8.1", "8.2"]
+        # https://endoflife.date/php
+        php: ["8.1", "8.2", "8.3", "8.4"]
     name: PHP
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{matrix.php}}
@@ -32,11 +33,12 @@ jobs:
   ruby:
     strategy:
       matrix:
-        ruby: ["2.6", "2.7", "3.0", "3.1"]
+        # https://endoflife.date/ruby
+        ruby: ["3.2", "3.3", "3.4"]
     name: Ruby
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}

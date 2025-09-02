@@ -2,7 +2,7 @@
 
 ## Generating the regex
 
-1. Download the latest CSV file from <https://data.gov.in/resources/all-india-pincode-directory-till-last-month>.
+1. Download the latest CSV file from <https://www.data.gov.in/resource/all-india-pincode-directory-till-last-month>.
 2. Copy all the pincodes to a pincodes.csv file
 3. Generate all unique pincodes by running `npm run build`
 

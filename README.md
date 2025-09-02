@@ -4,11 +4,11 @@ Validate a [Postal Index Number][wiki] for India with a few regexes and zero fal
 
 ## Why?
 
-A simple `\d{6}` approach marks a lot of invalid pincodes as valid. Out of the 900000 possible combinations, only approximately `19000` are valid pincodes in India. A simple example is `111111` which is an invalid pincode, but any simple 6 digit-check will pass it as a valid one.
+A simple `\d{6}` approach marks a lot of invalid pincodes as valid. Out of the 900000 possible combinations, only 19584 are valid pincodes in India. A simple example is `111111` which is an invalid pincode, but any simple 6 digit-check will pass it as a valid one.
 
 ## Source
 
-The source for the data is the ["All India Pincode Directory"](https://data.gov.in/resources/all-india-pincode-directory) dataset on data.gov.in. The last updated date for the dataset is currently 30th May 2019.
+The source for the data is the ["All India Pincode Directory"](https://www.data.gov.in/resource/all-india-pincode-directory-till-last-month) dataset on data.gov.in. The last updated date for the dataset is currently 30th May 2019.
 
 ## Usage
 

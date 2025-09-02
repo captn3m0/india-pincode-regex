@@ -6,11 +6,15 @@ assert.strictEqual(P.validate('110011'), true, '110011');
 assert.strictEqual(P.validate('244713'), true, '244713');
 assert.strictEqual(P.validate('560029'), true, '560029');
 assert.strictEqual(P.validate('560030'), true, '560030');
+assert.strictEqual(P.validate('121999'), true, '121999');
+assert.strictEqual(P.validate('123304'), true, '123304');
 
 // Incorrect
 assert.strictEqual(P.validate('address 560030'), false, 'address 560030 should fail');
 assert.strictEqual(P.validate('1100111'), false, '1100111');
 assert.strictEqual(P.validate('111111'), false, '111111');
+assert.strictEqual(P.validate('323306'), false, '323306'); // used to be valid
+assert.strictEqual(P.validate('143003'), false, '143003'); // used to be valid
 assert.strictEqual(P.validate('999999'), false, '999999');
 assert.strictEqual(P.validate('99999'), false, '99999');
 assert.strictEqual(P.validate('9999'), false, '9999');

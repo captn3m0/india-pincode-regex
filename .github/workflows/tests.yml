@@ -45,3 +45,17 @@ jobs:
           bundler-cache: true
       - run: bundle install
       - run: bundle exec rake
+  python:
+    strategy:
+      matrix:
+        # https://endoflife.date/python
+        python: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+    name: Ruby
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install .[dev]
+      - run: nose2

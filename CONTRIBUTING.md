@@ -20,10 +20,16 @@ The two files are:
 2. `npm run browserify`.
 3. Test it by opening `tests/index.html` in your browser.
 
-# PHP Release
+## Release Process
 
-1. `git tag v1.2.3`
-2. `git push --tags`
+0. Update `CHANGELOG.md`
+1. Update `package.json` version
+2. Update `pyproject.toml` version
+3. Update `src/pincode_validator.rb` version
+4. Commit as version bump and push
+5. Let tests pass, validate etc.
+6. Tag as vx.y.z and push again
+7. GitHub Actions + Trusted Publishing will release everything.
 
 ## Ruby Development
 

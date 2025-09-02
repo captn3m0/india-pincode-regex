@@ -1,14 +1,14 @@
 [project]
 name = "pincode"
-version = "2.0.0"
+dynamic = ["version"]
 description = "A simple offline pincode validator for India"
 authors = [
     {name = "Nemo", email = "python@captnemo.in"},
 ]
 dependencies = ["requests"]
 readme = "README.md"
-requires-python = ">=3.8"
-license = {text = "MIT"}
+requires-python = ">=3.9"
+license = "MIT"
 keywords = ["pincode", "regex", "offline", "pin", "validator"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -22,22 +22,10 @@ Repository = "https://github.com/captn3m0/india-pincode-regex"
 Documentation = "https://github.com/captn3m0/india-pincode-regex/wiki"
 
 [tool.pdm]
-includes = ["CHANGELOG.md", "README.md", "regex.txt", "src/pincode"]
-excludes = [
-    ".github/",
-    "src/*.js",
-    "src/*.php",
-    "tests/*.php",
-    "tests/*.js",
-    "tests/*.rb",
-    "tests/*.html",
-    "tests/jasmine*",
-    "vendor/",
-    "composer.",
-    "package.json",
-    "package-lock.json",
-    "node_modules/"
-    ]
+includes = ["src/pincode"]
+
+[tool.pdm.version]
+source = "scm"
 
 [build-system]
 requires = ["pdm-pep517"]

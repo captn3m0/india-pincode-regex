@@ -14,8 +14,9 @@ const readInterface = readline.createInterface({
 
 regexes = [];
 
-// There are 3 Pincodes that start with 9, but we
-// ignore those as test offices.
+// There are 3 Pincodes that start with 9, but those
+// belong to the Army Postal Service (APS) and
+// we ignore them
 for (var i = 0; i < 8; i++) {
   regexes.push(new Trie());
 }

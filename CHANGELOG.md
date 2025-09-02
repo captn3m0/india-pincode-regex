@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. The format 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [UNRELEASED][unreleased]
+
+## 3.0.0
+
+- The Army Postal Service pincodes are not included in the regex anymore.
 - The following pincodes have been removed.
 
   `141017`, `142028`, `143003`, `144004`, `144011`, `144012`, `160005`, `160016`,

@@ -1,6 +1,6 @@
 [project]
 name = "pincode"
-dynamic = ["version"]
+version = "3.0.0"
 description = "A simple offline pincode validator for India"
 authors = [
     {name = "Nemo", email = "python@captnemo.in"},
@@ -25,11 +25,8 @@ homepage = "https://github.com/captn3m0/india-pincode-regex"
 Repository = "https://github.com/captn3m0/india-pincode-regex"
 Documentation = "https://github.com/captn3m0/india-pincode-regex/wiki"
 
-[tool.pdm]
+[tool.pdm.build]
 includes = ["src/pincode"]
-
-[tool.pdm.version]
-source = "scm"
 
 [build-system]
 requires = ["pdm-pep517"]

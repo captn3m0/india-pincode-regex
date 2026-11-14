@@ -1,12 +1,9 @@
-import os
 import re
 
-from pathlib import Path
 from importlib import resources
 
-f = open('regex.txt')
-regex_str = f.read().strip()
-regex = re.compile('^' + regex_str.strip() + '$')
+regex_str = (resources.files('pincode') / 'regex.txt').read_text().strip()
+regex = re.compile('^' + regex_str + '$')
 
 class Pincode:
     @staticmethod

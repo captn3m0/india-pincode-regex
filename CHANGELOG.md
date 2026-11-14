@@ -5,6 +5,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## 3.0.1
+
+- Fixed the Python package raising `FileNotFoundError` on import unless the process was started from a directory containing `regex.txt`; the data is now loaded from the installed package via `importlib.resources` (#2).
+- Dropped end-of-life runtimes (Python 3.9/3.10, Ruby 3.2, PHP 8.1, Node 20), pinned GitHub Actions to SHAs, and switched the Python build backend to `pdm-backend`.
+
 ## 3.0.0
 
 - The Army Postal Service pincodes are not included in the regex anymore.

@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [UNRELEASED][unreleased]
 
+## 3.0.2
+
+- Fixed the npm publish job (`npm ci` without a committed lockfile and a data-regen build step), so npm releases work again and all three registries stay in sync. No library code changed from 3.0.1.
+
 ## 3.0.1
 
 - Fixed the Python package raising `FileNotFoundError` on import unless the process was started from a directory containing `regex.txt`; the data is now loaded from the installed package via `importlib.resources` (#2).

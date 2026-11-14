@@ -1,6 +1,6 @@
 {
   "name": "pincode-validator",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A simple regex based validator for PIN codes in India",
   "main": "src/index.js",
   "directories": {

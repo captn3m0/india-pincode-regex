@@ -1,16 +1,20 @@
 on: push
 name: Tests
+permissions:
+  contents: read
 jobs:
   node:
     strategy:
       matrix:
         # https://endoflife.date/nodejs
-        node: ["20", "22", "24"]
+        node: ["22", "24", "26"]
     name: Node.js
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: ${{matrix.node}}
       - run: npm install
@@ -19,12 +23,14 @@ jobs:
     strategy:
       matrix:
         # https://endoflife.date/php
-        php: ["8.1", "8.2", "8.3", "8.4"]
+        php: ["8.2", "8.3", "8.4", "8.5"]
     name: PHP
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: shivammathur/setup-php@v2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
         with:
           php-version: ${{matrix.php}}
           tools: phpunit, composer
@@ -34,12 +40,14 @@ jobs:
     strategy:
       matrix:
         # https://endoflife.date/ruby
-        ruby: ["3.2", "3.3", "3.4"]
+        ruby: ["3.3", "3.4", "4.0"]
     name: Ruby
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@b3aaceaef7e0ee231b499e7b5f49c03fc1d32199 # v1.338.0
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
@@ -49,12 +57,14 @@ jobs:
     strategy:
       matrix:
         # https://endoflife.date/python
-        python: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        python: ["3.11", "3.12", "3.13", "3.14", "3.15"]
     name: Python
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python }}
       - run: pip install .[dev]
